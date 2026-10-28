@@ -1,0 +1,11 @@
+1. What changed in the customer table when direction was Both:
+   When direction was set to 'Both', the filter applied on Products (Product = Laptop) passed through Sales and propagated back to Customers, filtering the table to show only the customer who bought a Laptop (Ali Khan). Under 'Single', the filter stopped at Sales.
+
+2. Customer with no orders:
+   Hina (C04)
+
+3. Product never sold:
+   Monitor
+
+4. Why Computers Sales shows 900 on the Accessories row:
+   CALCULATE overrides the existing filter context from the matrix/table row (Accessories) and replaces it with the filter explicitly passed inside it (Products[Category] = "Computers").
